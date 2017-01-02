@@ -1,10 +1,11 @@
 import React from 'react';
-
+import { Router, Route, hashHistory } from 'react-router';
+import Start from './Start';
 
 export default class App extends React.Component {
   render() {
     return (
-      <h1>Hello!</h1>
+      <Router history={hashHistory}><Route path="/" component={Start} /></Router>
     );
   }
 }
