@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
-import Button from './elements/Button';
+import LinktoButton from './elements/LinktoButton';
 import Header from './elements/Header';
+
 
 export default class Start extends React.Component {
 
@@ -22,17 +22,17 @@ export default class Start extends React.Component {
 
       <section className="hero is-medium is-dark is-bold" style={this.style.layout}>
 
-      <Header text='The werewolves of millers hollow' />
+        <Header text="The werewolves of millers hollow" />
 
         <div style={this.style.buttonStyle}>
           <div className="columns">
             <div className="column has-text-centered">
-              <Link to="/create-game"><Button buttonClass="button is-primary is-large" text="I am the host!" /></Link>
+              <LinktoButton id="create-game" to="/create-game" buttonClass="button is-primary is-large" text="I am the host!" />
             </div>
           </div>
           <div className="columns">
             <div className="column has-text-centered">
-              <Link to="/join-game"><Button buttonClass="button is-info is-large" text="Join a game!" /></Link>
+              <LinktoButton id="join-game" to="/join-game" buttonClass="button is-info is-large" text="Join a game!" />
             </div>
           </div>
         </div>
