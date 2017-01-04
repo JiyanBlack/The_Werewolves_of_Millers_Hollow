@@ -1,0 +1,38 @@
+Identities:
+Fortune-Teller, Hunter, Witch, Bodyguard, Werewolf, Villager
+
+Events:
+Common:	('join-game','roomid') - emit
+	('resume-game','device-id') - emit
+	('resume-game', gameStatus) - receive
+	('device-id','deviceId') - receive
+	('all-connected') - receive
+	('get-player-id',{identity: identity}) -receive
+	('error','text') - receive
+	('die-in-night', gameStatus) - receive
+	('witch-turn','who-killed-number') - receive
+	('fortun-teller-turn',none) - receive
+	('werewolves-turn',none) - receive
+	('night-on',none) - receive
+	
+	('end-game',none) - receive
+	
+
+Host:	('end-game',none) - emit
+	('create-game',{gameinfo object}) - emit
+
+
+Fortune-Teller: ('prediction','number') - emit
+
+
+Witch: 	('witch-save-or-not','yes'/'no') - emit
+	('witch-poison-who','number'/'0') - emit
+
+
+Bodyguard: ('guard-who','number') - emit
+
+Hunter: ('can-you-fire','yes'/'no') - receive
+	('check-can-you-fire',none) - emit
+
+werewolfves:	('kill','number') - emit
+

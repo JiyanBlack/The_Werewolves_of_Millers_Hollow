@@ -5,6 +5,8 @@ import CreateGame from './CreateGame';
 import JoinGame from './JoinGame';
 import HostPlayer from './HostPlayer';
 import NormalPlayer from './NormalPlayer';
+import FortuneTeller from './FortuneTeller';
+import Bodyguard from './Bodyguard';
 
 export default class App extends React.Component {
   constructor() {
@@ -25,10 +27,10 @@ export default class App extends React.Component {
         <Route path="/host-player" component={HostPlayer} />
         <Route path="/normal-player" component={NormalPlayer} />
         <Route path="/poison-save-witch" />
-        <Route path="/eat-werewolves" />
-        <Route path="/discover-fortune-teller" />
+        <Route path="/kill-werewolves" />
+        <Route path="/prediction-fortune-teller" component={FortuneTeller} />
         <Route path="/can-hunter-fire" />
-        <Route path="/guard-bodyguard" />
+        <Route path="/guard-bodyguard" component={Bodyguard} />
         <Route path="/who-are-you" />
       </Router>
     );

@@ -21,7 +21,7 @@ export default class Start extends React.Component {
   }
 
   componentDidMount() {
-    document.getElementById('join-button').onclick(() => { });
+    document.getElementById('join-button').onclick = (el) => { };
   }
 
   render() {

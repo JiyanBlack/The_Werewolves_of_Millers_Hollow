@@ -22,7 +22,7 @@ export default class HostPlayer extends React.Component {
           <button id="tell-who-died-button" className="button is-warning is-large" style={this.style.buttonStyle}>Who died last night?</button>
         </div>
         <InputBox styleClass="is-warning" text="Who is shot by the hunter? (Enter 0 if no one.)" type="tel" name="shot-by-hunter" />
-        <InputBox styleClass="is-primary" text="Who is voted to be banished?(Enter 0 if no one.)" type="tel" name="be-banished" />
+        <InputBox styleClass="is-primary" text="Who is voted to be banished? (Enter 0 if no one.)" type="tel" name="be-banished" />
         <div className="control" >
           <button id="go-to-night-button" className="button is-danger is-large" style={this.style.buttonStyle}>It's night!</button>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import InputBox from './elements/InputBox';
 
 export default class Start extends React.Component {
@@ -17,9 +16,6 @@ export default class Start extends React.Component {
     };
   }
 
-  isNumeric(n) {
-    return !isNaN(parseFloat(n)) && isFinite(n);
-  }
 
   componentDidMount() {
     const myform = document.getElementById('create-game-form');
@@ -66,7 +62,7 @@ export default class Start extends React.Component {
             <InputBox styleClass="is-info" text="Hunter Number" type="tel" name="hunterno" />
             <InputBox styleClass="is-success" text="Bodyguard Number" type="tel" name="guardno" />
             <InputBox styleClass="is-warning" text="Witch Number" type="tel" name="witchno" />
-            <InputBox text="Villager Number" type="tel" name="villagerno" />
+            <InputBox styleClass="" text="Villager Number" type="tel" name="villagerno" />
             <InputBox styleClass="is-danger" text="Werewolf Number" type="tel" name="wolfno" />
             <br />
             <div className="control" >
